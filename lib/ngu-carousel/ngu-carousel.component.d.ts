@@ -1,6 +1,6 @@
 import { AfterContentInit, AfterViewInit, ChangeDetectorRef, DoCheck, ElementRef, IterableChanges, IterableDiffer, IterableDiffers, OnDestroy, OnInit, Renderer2, TrackByFunction } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NguCarouselOutlet } from './../ngu-carousel.directive';
+import { NguCarouselOutlet } from '../ngu-carousel.directive';
 import { NguCarouselStore } from './ngu-carousel';
 export declare class NguCarousel<T> extends NguCarouselStore implements OnInit, AfterContentInit, AfterViewInit, OnDestroy, DoCheck {
     private _el;
@@ -46,6 +46,7 @@ export declare class NguCarousel<T> extends NguCarouselStore implements OnInit, 
     private carousel;
     private onResize;
     private onScrolling;
+    private onInitialDelay;
     pointNumbers: Array<any>;
     /**
      * Tracking function that will be used to check the differences in data changes. Used similarly
